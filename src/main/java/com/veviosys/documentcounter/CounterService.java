@@ -21,4 +21,8 @@ public class CounterService {
             counterRepository.increaseCount(1L);
         }
     }
+
+    public Long currentValue() {
+       return counterRepository.findById(0L).get().getCurrentCount();
+    }
 }
